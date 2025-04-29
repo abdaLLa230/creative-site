@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Thinking</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images\icon.jpg" type="image/x-icon">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Fixed Navbar -->
+    <nav class="bg-gray-200 shadow-lg sticky top-0 z-50">
+        <div class=" mx-auto px-4">
+            <div class="flex container justify-between items-center py-3">
+                <h1 class="lg:ps-24  text-xl font-bold text-blue-600">Creative Thinking Hub</h1>
+                <div class="hidden md:flex space-x-6 lg:pe-24">
+                    <button onclick="showSection('home')" class="text-gray-700 hover:text-blue-600 transition">Home</button>
+                    <button onclick="showSection('mindmap')" class="text-gray-700 hover:text-blue-600 transition">Mind Map</button>
+                    <button onclick="showSection('chapters')" class="text-gray-700 hover:text-blue-600 transition">Chapters</button>
+                    <button onclick="showSection('creative')" class="text-gray-700 hover:text-blue-600 transition">Creative Thinking</button>
+                    <button onclick="showSection('feedback')" class="text-gray-700 hover:text-blue-600 transition">Feedback</button>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars border-2 border-gray-500 px-1 rounded-md text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-gray-200 border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <button onclick="showSection('home')" class="py-2 text-left text-gray-700 hover:text-blue-600">Home</button>
+                <button onclick="showSection('mindmap')" class="py-2 text-left text-gray-700 hover:text-blue-600">Mind Map</button>
+                <button onclick="showSection('chapters')" class="py-2 text-left text-gray-700 hover:text-blue-600">Chapters</button>
+                <button onclick="showSection('creative')" class="py-2 text-left text-gray-700 hover:text-blue-600">Creative Thinking</button>
+                <button onclick="showSection('feedback')" class="py-2 text-left text-gray-700 hover:text-blue-600">Feedback</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <!-- محتوى الصفحة الرئيسية الأصلي بالكامل -->
+            <div class="text-center mb-6">
+                <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Creative Thinking</h1>
+            </div>
+            
+            <!-- About Creative Thinking -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">About Creative Thinking</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-gray-700 mb-4">
+                            Creative thinking is the ability to look at problems and situations from a fresh perspective that suggests unorthodox solutions.
+                            It involves breaking away from traditional patterns of thinking and generating innovative ideas.
+                        </p>
+                        <p class="text-gray-700">
+                            This course explores various thinking models, problem-solving techniques, and innovation 
+                            strategies to help you develop your creative potential.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg flex items-center justify-center">
+                        <img src="images/creative%20thinking.jpeg"
+                             alt="Creative Thinking" class="rounded-2xl w-full h-60 object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Benefits -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">Key Benefits of Creative Thinking</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <h3 class="font-semibold mb-2 text-blue-700">Problem Solving</h3>
+                        <p class="text-gray-700 text-sm">
+                            Find innovative solutions to complex challenges by thinking outside conventional frameworks.
+                        </p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                        <h3 class="font-semibold mb-2 text-green-700">Adaptability</h3>
+                        <p class="text-gray-700 text-sm">
+                            Adjust to new situations and changing environments with flexible thinking approaches.
+                        </p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                        <h3 class="font-semibold mb-2 text-purple-700">Innovation</h3>
+                        <p class="text-gray-700 text-sm">
+                            Develop new products, services, or approaches that create value and differentiation.
+                        </p>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                        <h3 class="font-semibold mb-2 text-yellow-700">Decision Making</h3>
+                        <p class="text-gray-700 text-sm">
+                            Consider multiple perspectives and alternatives for more informed choices.
+                        </p>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                        <h3 class="font-semibold mb-2 text-red-700">Learning</h3>
+                        <p class="text-gray-700 text-sm">
+                            Connect new information with existing knowledge in original and meaningful ways.
+                        </p>
+                    </div>
+                    <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                        <h3 class="font-semibold mb-2 text-indigo-700">Collaboration</h3>
+                        <p class="text-gray-700 text-sm">
+                            Contribute unique ideas and build on others' thoughts in team environments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mind Map Section -->
+        <section id="mindmap" class="section hidden">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">Mind Map</h2>
+            
+            <!-- Mind Map Navigation Tabs -->
+            <div class="mb-6 overflow-x-auto">
+                <div class="flex space-x-2 pb-2">
+                    <button onclick="showMindMap('chapters12')" class="mindmap-tab active px-4 py-2 bg-blue-600 text-white rounded-full text-sm">Chapter One & Two</button>
+                    <button onclick="showMindMap('chapters34')" class="mindmap-tab px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm">Chapter Three & Four</button>
+                    <button onclick="showMindMap('chapter5')" class="mindmap-tab px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm">Chapter Five</button>
+                </div>
+            </div>
+            
+            <!-- Mind Map Content -->
+            <div id="mindmapContent" class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <!-- Content loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Chapters Summary Section -->
+        <section id="chapters" class="section hidden">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">Chapters Summary</h2>
+            
+            <!-- Chapters Navigation Tabs -->
+            <div class="mb-6 overflow-x-auto">
+                <div class="flex space-x-2 pb-2">
+                    <button onclick="showChapter('chapter1')" class="chapter-tab active px-4 py-2 bg-blue-600 text-white rounded-full text-sm">Chapter 1</button>
+                    <button onclick="showChapter('chapter2')" class="chapter-tab px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm">Chapter 2</button>
+                    <button onclick="showChapter('chapter3')" class="chapter-tab px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm">Chapter 3</button>
+                    <button onclick="showChapter('chapter4')" class="chapter-tab px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm">Chapter 4</button>
+                    <button onclick="showChapter('chapter5')" class="chapter-tab px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm">Chapter 5</button>
+                </div>
+            </div>
+            
+            <!-- Chapter Content -->
+            <div id="chapterContent" class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <!-- Content loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="section hidden">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">Feedback</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                    <p class="text-gray-700 mb-4 italic">
+                        "Bloom's Taxonomy provides a clear framework for understanding different levels of cognitive skills, 
+                        from basic recall to advanced evaluation and creation."
+                    </p>
+                    <p class="text-blue-700">- Student Feedback on Chapter 1</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                    <p class="text-gray-700 mb-4 italic">
+                        "The problem-solving steps are practical and can be applied to both academic and real-world challenges. 
+                        The emphasis on brainstorming without judgment is particularly valuable."
+                    </p>
+                    <p class="text-blue-700">- Student Feedback on Chapter 2</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                    <p class="text-gray-700 mb-4 italic">
+                        "Understanding the difference between independent and dependent variables has clarified how to structure 
+                        research questions and hypotheses more effectively."
+                    </p>
+                    <p class="text-blue-700">- Student Feedback on Chapter 3</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                    <p class="text-gray-700 mb-4 italic">
+                        "Maslow's Hierarchy of Needs provides a valuable lens for understanding human motivation, 
+                        both in academic studies and in practical team management situations."
+                    </p>
+                    <p class="text-blue-700">- Student Feedback on Chapter 4</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creative Thinking Section -->
+        <section id="creative" class="section hidden">
+            <h2 class="text-2xl font-bold text-blue-800 mb-16">Developing Creative Thinking</h2>
+
+            <h2 class="text-2xl font-bold text-blue-600 mb-5">To be good character : </h2>
+            <div class="bg-gray-100 lg:mb-6 rounded-lg flex items-center justify-center">
+                <img src="images/good%20char.jpg"
+                     alt="Creative Thinking" class="rounded-2xl w-auto h-[550px] object-contain">
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Steps -->
+                <div class="bg-white p-6 rounded-xl shadow-md md:w-2/3">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-6">Steps to Become a Creative Thinker</h3>
+                    <div class="space-y-6" id="steps-container">
+                        <!-- Steps will be added by JavaScript with animation -->
+                    </div>
+                </div>
+                
+                <!-- Quotes -->
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 md:w-1/3">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-6">Creative Inspiration</h3>
+                    <div class="space-y-6" id="quotes-container">
+                        <!-- Quotes will be added by JavaScript -->
+                    </div>
+                    <button onclick="showNewQuotes()" class="mt-6 w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                        Show New Quotes
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js\script.js"></script>
+</body>
+</html>
