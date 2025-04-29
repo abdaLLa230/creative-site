@@ -649,7 +649,7 @@ ideas and solutions. </p>
                             </ul>
                         </div>
                         <div class="bg-gray-100 rounded-lg p-3 flex items-center justify-center">
-                            <img src="${mindmap.image}" alt="${mindmap.title}" class="rounded   w-auto h-[550px] object-contain">
+                            <img src="${mindmap.image}" alt="${mindmap.title}" class="rounded   w-auto h-[550px] object-fill">
                         </div>
                     </div>
                 </div>
